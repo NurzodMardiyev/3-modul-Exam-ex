@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Pizza</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .productIdThick {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body class="bg-secondary">
+    <div class="row d-flex offset-md-3 gap-3 mt-4">
+      <div class="col-md-4 bg-white">
+        <h1>Pizza</h1>
+        <form action="" id="formEl">
+          <input class="form-control" required type="text" placeholder="Name" />
+          <input
+            class="form-control mt-2"
+            type="number"
+            placeholder="Phone Number"
+            required
+          />
+          <input class="form-control mt-2" type="text" placeholder="Adress" />
+
+          <select
+            class="form-select mb-3 mt-2"
+            required
+            aria-label="Default select example"
+          >
+            <option selected value="">Sellect thickness</option>
+            <option value="Thin">Thin</option>
+            <option value="Medium">Medium</option>
+            <option value="Thick">Thick</option>
+          </select>
+
+          <div class="selectedSize d-flex justify-content-between">
+            <h2 class="fs-4 mt-3">Select Size</h2>
+            <select class="d-flex gap-3" required>
+              <option
+                value="25sm"
+                class="size rounded-5 border border-1 d-flex align-items-center pe-auto"
+              >
+                25sm
+              </option>
+              <option
+                value="35sm"
+                class="size rounded-5 border border-1 d-flex align-items-center pe-auto"
+              >
+                35sm
+              </option>
+              <option
+                value="45sm"
+                class="size rounded-5 border border-1 d-flex align-items-center pe-auto"
+              >
+                45sm
+              </option>
+            </select>
+          </div>
+
+          <din class="onPizza">
+            <h2 class="fs-4 mt-3">on Pizza</h2>
+            <div class="form-check d-flex">
+              <div class="w-50">
+                <div class="mr-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Tmato"
+                    id="Tmato"
+                  />
+                  <label class="form-check-label" for="Tmato"> Tmato </label>
+                </div>
+                <div class="mr-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Packet Cocumber"
+                    id="PacketCocumber"
+                  />
+                  <label class="form-check-label" for="PacketCocumber">
+                    Packet Cocumber
+                  </label>
+                </div>
+                <div class="mr-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=" Olivie"
+                    id="Olivie"
+                  />
+                  <label class="form-check-label" for="Olivie"> Olivie </label>
+                </div>
+              </div>
+
+              <div class="w-50">
+                <div class="mr-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Turke yMeet"
+                    id="TurkeyMeet"
+                  />
+                  <label class="form-check-label" for="TurkeyMeet">
+                    Turkey Meet
+                  </label>
+                </div>
+                <div class="mr-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Mushroom"
+                    id="Mushroom"
+                  />
+                  <label class="form-check-label" for="Mushroom">
+                    Mushroom
+                  </label>
+                </div>
+                <div class="mr-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Hourse Meet"
+                    id="HourseMeet"
+                  />
+                  <label class="form-check-label" for="HourseMeet">
+                    Hourse Meet
+                  </label>
+                </div>
+              </div>
+            </div>
+          </din>
+          <din class="Add">
+            <h3 class="fs-4 mt-3">Add</h3>
+            <div class="form-check d-flex">
+              <div class="mr-3 w-50">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Pepper"
+                  id=" Pepper"
+                />
+                <label class="form-check-label" for=" Pepper"> Pepper </label>
+              </div>
+              <div class="mr-3 w-50">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Sausages"
+                  id="Sausages"
+                />
+                <label class="form-check-label" for="Sausages">
+                  Sausages
+                </label>
+              </div>
+            </div>
+          </din>
+          <div class="btnEl d-flex justify-content-center mt-3">
+            <button class="btn-btn-primary px-3 py-2 rounded-2">save</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-4 bg-white ordered" id="ordered">
+        <div class="client__info">
+          <h1>Order: 1</h1>
+          <p>
+            <span class="productIdThick">Name:</span>
+            <span>Palaonchi pistonchi</span>
+          </p>
+          <p>
+            <span class="productIdThick">Phone:</span>
+            <span> +998 88 3921383</span>
+          </p>
+          <p>
+            <span class="productIdThick">Adress:</span>
+            <span>Chilonzor 23</span>
+          </p>
+        </div>
+        <div class="product__info">
+          <p>
+            <span class="productIdThick">Dough thickness:</span>
+            <span>Medium</span>
+          </p>
+          <p>
+            <span class="productIdThick">Size:</span>
+            <span>25sm</span>
+          </p>
+          <p>
+            <span class="productIdThick">On Pizza:</span>
+            <span>mana</span>
+          </p>
+          <p>
+            <span class="productIdThick">Add:</span>
+            <span>Pepper</span>
+          </p>
+        </div>
+        <div class="total text-center">
+          <h2>140$</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
